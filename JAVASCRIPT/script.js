@@ -2,14 +2,14 @@ let ticketKeys = document.querySelectorAll('.ticketKeys');
 let count = 1;
 let seatCount = 1;
 let ticketPerPiece = 550;
-let arr = [];
+
 for (let ticketKey of ticketKeys) {
     ticketKey.addEventListener('click', function() {
 
 
 
         if (count > 4) {
-            alert(`You can only buy 4 tickets`)
+            alert("You can only buy 4 tickets")
         } else {
             ticketKey.style.background = '#1DD100';
             ticketKey.style.color = 'white';
@@ -58,7 +58,7 @@ inputField.addEventListener('keyup', function(e) {
     } else {
         applyCoupon.setAttribute('disabled', true);
     }
-    console.log(count);
+    return count;
 })
 
 
@@ -68,35 +68,39 @@ applyCoupon.addEventListener('click', function() {
     let totalPriceValue = parseInt(totalPrice.innerText);
     let GrandTotal = document.getElementById('GrandTotal');
     let discountArea = document.getElementById('discount');
-    if (inputField.value === 'NEW15') {
+        if (inputField.value === 'NEW15') {
         let discount = parseInt(totalPriceValue * 0.15);
         discountArea.innerText = `Total Discount : BDT ${discount}`;
         let totalGrandPrice = totalPriceValue - discount;
         GrandTotal.innerText = totalGrandPrice;
 
         discountArea.classList.remove('hidden');
-    } else if (inputField.value === 'Couple 20') {
+    } 
+    else if (inputField.value === 'Couple 20') {
         let discount = parseInt(totalPriceValue * 0.20);
         discountArea.innerText = `Total Discount : BDT ${discount}`;
         let totalGrandPrice = totalPriceValue - discount;
         GrandTotal.innerText = totalGrandPrice;
 
         discountArea.classList.remove('hidden');
-    }else{
-        alert('this coupon code is not valid')
+    }
+    else{
+        alert("this coupon code is not valid")
     }
     let applyArea = document.getElementById('applyArea');
     applyArea.classList.add('hidden');
     inputField.value = '';
 })
 
-// number validation 
+// number validation and  button visible
+
 let number = document.getElementById('number');
 number.addEventListener('keyup', function() {
     let numLen = number.value;
     if (numLen.length === 11 && count > 1) {
         modalOpen.removeAttribute('disabled')
-    } else {
+    } 
+    else {
         modalOpen.setAttribute('disabled', true)
     }
 })
@@ -141,4 +145,5 @@ modalClose.addEventListener('click', function() {
     main.classList.remove('hidden');
     let footer = document.getElementById('footer');
     footer.classList.remove('hidden');
+  
 })

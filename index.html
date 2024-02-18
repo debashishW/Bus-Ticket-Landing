@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Css Link -->
+    <!-- css Link -->
       <link rel="stylesheet" href="style.css">
-    <!-- web title  -->
-    <title>Smart Ticketing</title>
-    <link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon">
-
     <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
     <!-- daisy ui and tailwind css  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind custom css  -->
     <script>
         tailwind.config = {
@@ -27,21 +21,23 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                        textColor: '#5c5c5cf8',
-                        borderColor: '#1dd10d18',
-                        bgTrans: '#1dd10d18',
+                        textColor: '#03071299',
+                        borderColor: '#1dd10026',
+                        bgTrans: '#1dd10026',
                         primaryColor: '#1DD100',
                     }
                 }
             }
         }
     </script>
+    <title>Bus-Ticket-Landing-Page</title>
 </head>
 
 <body >
     <header id="header" class="lg:mx-32">
 
         <!-- header section  -->
+
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -82,12 +78,10 @@
                     <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br>
                         <span class="text-primaryColor">P Paribahan</span>
                     </h1>
-                    <p class="mb-5 text-gray-200">Yes, you can run unit tests and view the results directly within the
-                        app. The integrated testing features allow for a streamlined .</p>
+                    <p class="mb-5 text-gray-200">Yes, Now you can travel easily with P.Paribahan.To get your Ticket from anywhere Download the app NOW!.<br>Buy Ticket From the WEB.Click Here!</p>
                     <a href="#ticketSection"><button
                             class="text-black font-medium text-lg px-8 py-4 rounded-xl hover:bg-bgTrans hover:text-white transition duration-300 bg-primaryColor">Buy
                             Tickets</button></a>
-
                 </div>
                 <div class="absolute -bottom-16 flex flex-row  gap-12 items-center">
                     <div
@@ -120,7 +114,8 @@
     </header>
 
     <!-- Modal section -->
-    <section id="modal" class="hidden flex justify-center items-center">
+    
+    <section id="modal" class="hidden flex justify-center items-center ">
         <div class="flex flex-col items-center space-y-5 bg-gray-200 p-16 rounded-2xl">
             <img src="images/success.png" alt="success">
             <h1 class="text-[#27AE60] text-4xl font-semibold">SUCCESS</h1>
@@ -174,9 +169,7 @@
         <section id="ticketSection" class="py-10 border-t-2 border-primaryColor bg-[#F7F8F8] rounded-[100px] w-full">
             <div class="max-w-xl m-auto text-center space-y-3 pt-10">
                 <h1 class="text-4xl font-bold">P.H Paribahan</h1>
-                <p class="text-gray-500">Yes, you can run unit tests and view the results directly within the app. The
-                    integrated testing
-                    features allow for a streamlined .</p>
+                <p class="text-gray-500">Get your Ticket with best Offers.Get your seat by one Click firstly to enjoy your travel.Now,traveling is so easy with P.Paribahan.</p>
             </div>
             <div class="container m-auto my-10">
                 <div class="flex flex-row items-center bg-[#fff] rounded-xl">
@@ -206,8 +199,8 @@
                             <div class="border-[1px] border-dashed border-gray-300 my-5"></div>
                             <div class="flex justify-between items-center">
                                 <h3 class="bg-gray-200 p-5 rounded-lg cursor-pointer">Boarding Point - Laxmipur</h3>
-                                <h3 class="bg-gray-200 p-5 rounded-lg cursor-pointer">Dropping Point - Sirajganj</h3>
-                                <h3 class="bg-gray-200 p-5 rounded-lg cursor-pointer">DEst. Time - 11 Hour</h3>
+                                <h3 class="bg-gray-200 p-5 rounded-lg cursor-pointer">Dropping Point - Bogura</h3>
+                                <h3 class="bg-gray-200 p-5 rounded-lg cursor-pointer">Est. Time - 11 Hour</h3>
                             </div>
                         </div>
                     </div>
@@ -290,7 +283,6 @@
                     <div class="col-span-5 p-10">
                         <h3 class="text-2xl font-semibold">Select Your Seat</h3>
                         <div class="border-[1px] border-dashed border-gray-300 my-5"></div>
-
                         <div class="p-5">
                             <div class="flex justify-between items-center text-lg font-medium text-black">
                                 <p>Seat <span id="seat" class="bg-primaryColor px-2 py-1 rounded-lg text-white">0</span>
@@ -300,7 +292,7 @@
                             </div>
                             <div class="border-[1px] flex flex-col border-dashed border-gray-300 my-5"></div>
                             <!-- seat booking list container  -->
-                            <div id="boxContainer" class="space-y-3   p-5 h-[150px] overflow-y-scroll">
+                            <div id="boxContainer" class="space-y-3   p-5 h-[150px]">
 
                             </div>
 
