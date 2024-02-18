@@ -20,7 +20,7 @@ for (let ticketKey of ticketKeys) {
             let totalSeat = document.getElementById('totalSeat');
             let totalSeatP = totalSeat.innerText;
             totalSeat.innerText = totalSeatP - seatCount;
- 
+           
             // newElement Create by appendChild with p TAG
 
             let boxContainer = document.getElementById('boxContainer');
@@ -31,10 +31,18 @@ for (let ticketKey of ticketKeys) {
             p.classList.add('flex', 'justify-between', 'text-lg')
             boxContainer.appendChild(p);
 
+            //totaPrice section
+            
             let totalPrice = document.getElementById('totalPrice');
             let totalPriceValue = parseInt(totalPrice.innerText);
             totalPrice.innerText = totalPriceValue + ticketPerPiece;
 
+            //grandTotal section
+
+            let grandTotal = document.getElementById('GrandTotal');
+            let totalGrandValue = parseInt(grandTotal.innerText);
+            grandTotal.innerText = totalGrandValue + ticketPerPiece;
+          
             if (count > 4) {
                 applyCoupon.removeAttribute('disabled')
             } else {
@@ -83,7 +91,7 @@ applyCoupon.addEventListener('click', function() {
         discountArea.innerText = `Total Discount : BDT ${discount}`;
         let totalGrandPrice = totalPriceValue - discount;
         GrandTotal.innerText = totalGrandPrice;
-
+       
         discountArea.classList.remove('hidden');
     }
     else{
@@ -147,5 +155,5 @@ modalClose.addEventListener('click', function() {
     main.classList.remove('hidden');
     let footer = document.getElementById('footer');
     footer.classList.remove('hidden');
-  
+   
 })
