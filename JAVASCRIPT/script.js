@@ -4,7 +4,7 @@ let seatCount = 1;
 let ticketPerPiece = 550;
 let arr = [];
 for (let ticketKey of ticketKeys) {
-    ticketKey.addEventListener('click', () => {
+    ticketKey.addEventListener('click', function() {
 
 
 
@@ -48,7 +48,7 @@ let inputField = document.getElementById('inputField');
 let applyCoupon = document.getElementById('apply');
 
 
-inputField.addEventListener('keyup', (e) => {
+inputField.addEventListener('keyup', function(e) {
     let text = e.target.value;
     if(count > 3){
         applyCoupon.removeAttribute('disabled')
@@ -63,7 +63,7 @@ inputField.addEventListener('keyup', (e) => {
 
 
 // coupon apply listener 
-applyCoupon.addEventListener('click', () => {
+applyCoupon.addEventListener('click', function() {
     let totalPrice = document.getElementById('totalPrice');
     let totalPriceValue = parseInt(totalPrice.innerText);
     let GrandTotal = document.getElementById('GrandTotal');
@@ -94,7 +94,7 @@ applyCoupon.addEventListener('click', () => {
 
 // number validation 
 let number = document.getElementById('number');
-number.addEventListener('keyup', () => {
+number.addEventListener('keyup', function() {
     let numLen = number.value;
     if (numLen.length === 11 && count > 1) {
         modalOpen.removeAttribute('disabled')
@@ -106,7 +106,7 @@ number.addEventListener('keyup', () => {
 
 // modal opening and hide all prices and seat number 
 let modalOpen = document.getElementById('modalOpen');
-modalOpen.addEventListener('click', () => {
+modalOpen.addEventListener('click', function() {
     let modal = document.getElementById('modal');
     modal.classList.remove('hidden');
     let header = document.getElementById('header');
@@ -133,7 +133,7 @@ modalOpen.addEventListener('click', () => {
 
 // modal closing 
 let modalClose = document.getElementById('modalClose');
-modalClose.addEventListener('click', () => {
+modalClose.addEventListener('click', function() {
     let modal = document.getElementById('modal');
     modal.classList.add('hidden');
     let header = document.getElementById('header');
