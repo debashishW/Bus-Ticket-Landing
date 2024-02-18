@@ -43,7 +43,7 @@ for (let ticketKey of ticketKeys) {
 }
 
 
-// hide and show apply coupon field 
+// hide and show the  coupon field after enter coupon 
 let inputField = document.getElementById('inputField');
 let applyCoupon = document.getElementById('apply');
 
@@ -62,7 +62,7 @@ inputField.addEventListener('keyup', function(e) {
 })
 
 
-// coupon apply listener 
+// coupon apply function
 applyCoupon.addEventListener('click', function() {
     let totalPrice = document.getElementById('totalPrice');
     let totalPriceValue = parseInt(totalPrice.innerText);
@@ -85,8 +85,6 @@ applyCoupon.addEventListener('click', function() {
     }else{
         alert('this coupon code is not valid')
     }
-    // inputField.setAttribute('disabled', true);
-    // applyCoupon.setAttribute('disabled', true);
     let applyArea = document.getElementById('applyArea');
     applyArea.classList.add('hidden');
     inputField.value = '';
@@ -104,7 +102,7 @@ number.addEventListener('keyup', function() {
 })
 
 
-// modal opening and hide all prices and seat number 
+// modal opening and hide the home page 
 let modalOpen = document.getElementById('modalOpen');
 modalOpen.addEventListener('click', function() {
     let modal = document.getElementById('modal');
@@ -131,7 +129,8 @@ modalOpen.addEventListener('click', function() {
 })
 
 
-// modal closing 
+// modal closing and back to the main page
+
 let modalClose = document.getElementById('modalClose');
 modalClose.addEventListener('click', function() {
     let modal = document.getElementById('modal');
