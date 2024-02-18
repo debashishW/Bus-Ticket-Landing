@@ -20,14 +20,16 @@ for (let ticketKey of ticketKeys) {
             let totalSeat = document.getElementById('totalSeat');
             let totalSeatP = totalSeat.innerText;
             totalSeat.innerText = totalSeatP - seatCount;
+ 
+            // newElement Create by appendChild with p TAG
 
             let boxContainer = document.getElementById('boxContainer');
-            let div = document.createElement('div');
-            div.innerHTML = `<p>${ticketKey.innerText}</p>
+            let p = document.createElement('p');
+            p.innerHTML = `<p>${ticketKey.innerText}</p>
         <p>Economy</p>
         <p>550</p>`;
-            div.classList.add('flex', 'justify-between', 'text-lg')
-            boxContainer.appendChild(div);
+            p.classList.add('flex', 'justify-between', 'text-lg')
+            boxContainer.appendChild(p);
 
             let totalPrice = document.getElementById('totalPrice');
             let totalPriceValue = parseInt(totalPrice.innerText);
