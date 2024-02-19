@@ -1,6 +1,6 @@
-.font-raleway{
-    font-family: "Raleway", sans-serif;
-}
+body {
+  font-family: "Raleway", sans-serif;
+};
 * {
     scroll-behavior: smooth;
 }
@@ -8,3 +8,4 @@
 section {
     margin-top: 150px !important;
 }
+
