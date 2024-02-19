@@ -1,6 +1,6 @@
-body {
-  font-family: "Raleway", sans-serif;
-};
+body{
+    font-family: "Raleway", sans-serif;
+}
 * {
     scroll-behavior: smooth;
 }
@@ -8,4 +8,3 @@ body {
 section {
     margin-top: 150px !important;
 }
-

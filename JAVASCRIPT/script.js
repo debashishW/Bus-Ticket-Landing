@@ -143,7 +143,6 @@ modalOpen.addEventListener('click', function() {
     modalOpen.setAttribute('disabled', true)
 })
 
-
 // modal closing and back to the main page
 
 let modalClose = document.getElementById('modalClose');
