@@ -5,7 +5,8 @@ let ticketPerPiece = 550;
 
 for (let ticketKey of ticketKeys) {
     ticketKey.addEventListener('click', function() {
-
+    ticketKey.setAttribute('disabled',true);
+    
 
 
         if (count > 4) {
@@ -107,7 +108,7 @@ applyCoupon.addEventListener('click', function() {
 let number = document.getElementById('number');
 number.addEventListener('keyup', function() {
     let numLen = number.value;
-    if (numLen.length === 11 && count > 1) {
+    if (numLen.length === 11 && count > 1){
         modalOpen.removeAttribute('disabled')
     } 
     else {
@@ -155,5 +156,5 @@ modalClose.addEventListener('click', function() {
     main.classList.remove('hidden');
     let footer = document.getElementById('footer');
     footer.classList.remove('hidden');
-   
+    
 })
